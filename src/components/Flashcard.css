@@ -1,0 +1,76 @@
+/* בסיסי לכרטיסיות */
+.flashcard {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    direction: rtl;
+  }
+  
+  /* כשנחשפת התשובה */
+  .flashcard.expanded {
+    background-color: #fffbea;
+    max-height: 1000px;
+  }
+  
+  .flashcard-question h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* עיצוב התשובות */
+  .flashcard-answer {
+    background-color: #eef2ff; /* צבע רקע לתשובה */
+    border: 1px solid #d6e4ff; /* גבול לתשובה */
+    border-radius: 8px; /* עיגול הקצוות */
+    padding: 15px; /* רווח פנימי */
+    margin-top: 15px; /* רווח בין השאלה לתשובה */
+    transition: background-color 0.3s; /* אנימציה לרקע */
+  }
+  
+  .flashcard-answer p {
+    font-size: 1rem;
+    color: #333; /* צבע טקסט */
+    line-height: 1.5; /* רווח בין השורות */
+  }
+  
+  /* התאמה למסכים קטנים (אייפונים ומכשירים ניידים אחרים) */
+  @media (max-width: 768px) {
+    .flashcard {
+      padding: 15px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+  
+    .flashcard-question h3 {
+      font-size: 1rem;
+    }
+  
+    .flashcard-answer p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* התאמה לתצוגות קטנות מאוד (אייפונים קטנים) */
+  @media (max-width: 480px) {
+    .flashcard {
+      padding: 10px;
+      margin: 5px;
+      font-size: 0.8rem;
+    }
+  
+    .flashcard-question h3 {
+      font-size: 0.9rem;
+    }
+  
+    .flashcard-answer p {
+      font-size: 0.8rem;
+    }
+  }
+  
